@@ -1,0 +1,7 @@
+# sms-sender
+sms-sender/target/
+sms-sender/.vscode/
+sms-sender/.idea/
+sms-sender/*.log
+sms-sender/.env
+sms-sender/HELP.md
