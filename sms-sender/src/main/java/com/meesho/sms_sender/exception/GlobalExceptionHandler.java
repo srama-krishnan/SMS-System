@@ -39,4 +39,16 @@ public class GlobalExceptionHandler {
         );
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(resp);
     }
+
+    @ExceptionHandler(NoteNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNotFound(NoteNotFoundException ex) {
+        ErrorResponse resp = new ErrorResponse(
+                "NOT_FOUND",
+                ex.getMessage(),
+                Map.of(),
+                Instant.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(resp);
+    }
+
 }
