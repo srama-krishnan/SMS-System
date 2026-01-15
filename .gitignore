@@ -1,7 +1,28 @@
-# sms-sender
+# Build artifacts
 sms-sender/target/
+sms-store/server
+*.jar
+*.class
+
+# IDE
+.vscode/
+.idea/
+*.iml
 sms-sender/.vscode/
 sms-sender/.idea/
+
+# Logs
+*.log
 sms-sender/*.log
+
+# Environment
+.env
 sms-sender/.env
-sms-sender/HELP.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven wrapper (optional - can be committed or ignored)
+# sms-sender/mvnw
+# sms-sender/mvnw.cmd
