@@ -5,3 +5,5 @@ sms-sender/.idea/
 sms-sender/*.log
 sms-sender/.env
 sms-sender/HELP.md
+sms-sender/mvnw
+.vscode/
