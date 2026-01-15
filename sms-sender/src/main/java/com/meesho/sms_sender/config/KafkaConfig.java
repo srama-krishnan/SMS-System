@@ -33,7 +33,11 @@ public class KafkaConfig {
         configProps.put(ProducerConfig.ACKS_CONFIG, "all"); // Wait for all replicas
         configProps.put(ProducerConfig.RETRIES_CONFIG, 3); // Retry on failure
         configProps.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true); // Prevent duplicates
-        
+        // Disable type headers to ensure compatibility with Go consumer
+        // This prevents Spring from adding __TypeId__ header which Go consumer doesn't
+        // expect
+        configProps.put("spring.json.add.type.headers", false);
+
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
